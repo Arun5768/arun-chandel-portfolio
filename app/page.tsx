@@ -47,7 +47,7 @@ const missions = [
 const builds = [
   { index: 'B/01', title: 'EventOps Hub', tag: 'SOFTR · OPERATIONS', text: 'A working system for event evidence, searchable case studies, speaker applications and a protected organizer dashboard.', link: 'https://eventops.softr.app/' },
   { index: 'B/02', title: 'Echoverse', tag: 'ELEVENLABS · 3D WEB', text: 'A voice-controlled interactive 3D storytelling experience built around natural audio interaction.', link: 'https://echoverse-amber-gamma.vercel.app/' },
-  { index: 'B/03', title: 'Automation Systems', tag: 'CRM · AI OPS', text: 'Lead routing, CRM workflows, follow-up systems, dashboards and AI-assisted operations used by real teams.', link: 'https://linktr.ee/arun_edition' },
+  { index: 'B/03', title: 'Proofpack Kimi', tag: 'AUTOMATION · AI OPS', text: 'A working workflow that turns real project evidence into grounded application answers using Kimi K2.5.', link: 'https://github.com/Arun5768/proofpack-kimi' },
   { index: 'B/04', title: 'Observability, Eventually', tag: 'GRAFANA · FIELD NOTE', text: 'A practical breakdown of why a dashboard can look alive while telling you almost nothing useful.', link: 'https://medium.com/@arunchandel1780/i-built-a-grafana-dashboard-then-i-realised-it-wasnt-observability-32dbbe5752fa' },
 ];
 
@@ -87,13 +87,13 @@ export default function Home() {
     <main>
       <nav className="site-nav" aria-label="Primary navigation">
         <a className="wordmark" href="#top" aria-label="Arun Chandel — home"><span className="wordmark-dot" aria-hidden="true" />ARUN / OPS</a>
-        <div className="nav-links"><a href="#missions">Missions</a><a href="#builds">Builds</a><a href="#workshops">Workshops</a><a href="#ledger">Ledger</a></div>
+        <div className="nav-links"><a href="#about">About</a><a href="#missions">Missions</a><a href="#builds">Builds</a><a href="#workshops">Workshops</a></div>
         <a className="nav-cta" href="mailto:arunchandel1780@gmail.com">Start a build day <span aria-hidden="true">↗</span></a>
       </nav>
 
       <section className="hero" id="top">
         <div className="hero-copy">
-          <p className="eyebrow"><span /> Community operator · Automation builder · Bhopal, India</p>
+          <p className="eyebrow"><span /> Community operator · Automation builder · Central India · Bhopal</p>
           <h1>I turn curious<br />audiences into<br /><em>active builders.</em></h1>
           <p className="hero-deck">I design practical programs around AI, automation, developer tools and emerging technology—where people leave with something working, not just another event photograph.</p>
           <div className="hero-actions">
@@ -115,6 +115,27 @@ export default function Home() {
 
       <section className="proof-strip" aria-label="Selected impact figures">
         {proof.map((item, index) => <div className="proof-item" key={item.label}><span className="proof-index">0{index + 1}</span><strong>{item.value}</strong><span>{item.label}</span></div>)}
+      </section>
+
+      <section className="about-section section-shell" id="about">
+        <div className="about-portrait">
+          <div className="portrait-frame">
+            <img src="https://avatars.githubusercontent.com/u/97609559?v=4&size=640" alt="Arun Chandel" width="640" height="640" />
+          </div>
+          <span className="portrait-label">ACTUAL HUMAN · VERIFIED BY COFFEE</span>
+        </div>
+        <div className="about-copy">
+          <p className="eyebrow"><span /> About the operator</p>
+          <p className="about-kicker">ARUN PRATAP SINGH CHANDEL</p>
+          <h2>Community operator.<br /><em>Automation builder.</em></h2>
+          <p className="about-role">Co-founder, The Origin Guild · Technology &amp; automation lead</p>
+          <div className="about-background">
+            <p>I build CRM workflows, AI-assisted operations, dashboards and follow-up systems for teams doing real work.</p>
+            <p>Outside work, I help run a 1,300+ member builder community and have delivered 50+ AI, developer and emerging-tech initiatives across Central India.</p>
+            <p>My favourite format is simple: learn the tool deeply, build a useful workshop around it, and keep people shipping after the group photo.</p>
+          </div>
+          <div className="about-links"><a href="https://www.linkedin.com/in/arun-pratap-singh-chandel-7aa101259/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com/Arun5768" target="_blank" rel="noreferrer">GitHub ↗</a></div>
+        </div>
       </section>
 
       <section className="missions-section section-shell" id="missions">
@@ -185,7 +206,7 @@ export default function Home() {
         <div className="social-row"><a href="https://www.linkedin.com/in/arun-pratap-singh-chandel-7aa101259/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://x.com/arun_edition" target="_blank" rel="noreferrer">X / Twitter ↗</a><a href="https://github.com/Arun5768" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://linktr.ee/arun_edition" target="_blank" rel="noreferrer">Linktree ↗</a></div>
       </section>
 
-      <footer><span>ARUN / OPS · BHOPAL, INDIA</span><span>Built with evidence, caffeine and a reasonable distrust of vanity metrics.</span><a href="#top">Back to top ↑</a></footer>
+      <footer><span>ARUN / OPS · CENTRAL INDIA · BHOPAL</span><span>Built with evidence, caffeine and a reasonable distrust of vanity metrics.</span><a href="#top">Back to top ↑</a></footer>
     </main>
   );
 }
