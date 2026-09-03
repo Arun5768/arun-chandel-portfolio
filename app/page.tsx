@@ -26,6 +26,19 @@ const mediaFrames = [
   },
 ];
 
+const eventReel = [
+  { title: 'Bhopal Blockchain Blitz', meta: 'Devcon satellite · Bhopal', image: '/event-reel/bhopal-blockchain-blitz.jpg' },
+  { title: 'Claude Code for Builders', meta: 'Hands-on AI lab · Bhopal', image: '/event-reel/claude-code-builders.jpg' },
+  { title: 'Solana Across Campuses', meta: 'Campus workshop · Central India', image: '/event-reel/solana-campus.jpg' },
+  { title: 'Chainlink Prediction Markets', meta: 'Technical workshop · Bhopal', image: '/event-reel/chainlink-prediction-markets.jpg' },
+  { title: 'Monad Blitz', meta: 'Full-day hackathon · Bhopal', image: '/event-reel/monad-blitz.jpg' },
+  { title: 'Superteam Dev with Dinner', meta: 'Builder dinner · Bhopal', image: '/event-reel/superteam-dev-dinner.jpg' },
+  { title: 'GitHub Copilot Dev Days', meta: 'AI coding lab · Bhopal', image: '/event-reel/github-copilot-dev-days.jpg' },
+  { title: 'MetaMask Builder Night', meta: 'Community builder night · Vidisha', image: '/event-reel/metamask-builder-night.jpg' },
+];
+
+const communityArchive = 'https://celestial-lift-d60.notion.site/Highlighted-Previous-Community-Initiatives-355d71208f4080b587aecb79265070b8';
+
 const evidenceLinks = [
   { code: 'A/01', label: 'AI Production', title: 'Selected AI-assisted work', meta: 'Research · scripts · voice · image · video · human review', link: 'https://drive.google.com/drive/folders/1DuxVuVEhO5WYij0rI-1fvsvvYvtEBdQP' },
   { code: 'A/02', label: 'Video Portfolio', title: 'Editing and production reel', meta: '150+ AI-assisted videos produced', link: 'https://drive.google.com/drive/folders/10mGNOHz4x05vpZCGn_VivYHulrCBTkHf?usp=sharing' },
@@ -191,6 +204,24 @@ export default function Home() {
               <div><strong>{frame.title}</strong><span>{frame.note}</span></div>
             </a>
           ))}
+        </div>
+        <div className="event-reel" aria-label="Selected photographs from community events">
+          <div className="reel-topline">
+            <div><span className="reel-status" aria-hidden="true" />FIELD REEL / 08 SELECTED FRAMES</div>
+            <span>Hover to hold the room</span>
+            <a href={communityArchive} target="_blank" rel="noreferrer">Explore the full event archive ↗</a>
+          </div>
+          <div className="reel-viewport">
+            <div className="reel-track">
+              {[...eventReel, ...eventReel].map((event, index) => (
+                <figure className="reel-frame" key={`${event.title}-${index}`} aria-hidden={index >= eventReel.length ? true : undefined}>
+                  <img src={event.image} alt={index < eventReel.length ? `${event.title} community event` : ''} loading="lazy" />
+                  <figcaption><strong>{event.title}</strong><span>{event.meta}</span></figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
+          <p className="reel-note">A moving glimpse, not a substitute for the record. The linked archive contains the wider event history, formats and source evidence.</p>
         </div>
       </section>
 
