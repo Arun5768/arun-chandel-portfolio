@@ -1,8 +1,40 @@
 const proof = [
-  { value: '50+', label: 'community initiatives' },
+  { value: '52+', label: 'community initiatives' },
   { value: '1,300+', label: 'members in the core group' },
   { value: '600+', label: 'largest reported turnout' },
-  { value: '105', label: 'verified check-ins at one lab' },
+  { value: '150+', label: 'AI-assisted videos produced' },
+];
+
+const mediaFrames = [
+  {
+    title: 'Bhopal Blockchain Blitz',
+    note: 'Devcon satellite · 959 went on Luma',
+    image: 'https://images.lumacdn.com/cdn-cgi/image/format%3Dauto%2Cfit%3Dcover%2Cdpr%3D2%2Cbackground%3Dwhite%2Cquality%3D80%2Cwidth%3D800%2Cheight%3D800/event-covers/dv/66be5f1e-a997-4df3-b34c-f6a7ea006a93',
+    link: 'https://luma.com/vfr1ozki',
+  },
+  {
+    title: 'Monad Blitz Bhopal',
+    note: 'Full-day builder sprint · $1.5K prize pool',
+    image: 'https://images.lumacdn.com/cdn-cgi/image/format%3Dauto%2Cfit%3Dcover%2Cdpr%3D2%2Cbackground%3Dwhite%2Cquality%3D80%2Cwidth%3D800%2Cheight%3D800/event-covers/am/3b1d84ee-ef51-4f46-be37-c6c5e862eabc.png',
+    link: 'https://luma.com/blitz-bhopal-dec-2025',
+  },
+  {
+    title: 'Claude Community Conversation',
+    note: 'AI community · Bhopal',
+    image: 'https://images.lumacdn.com/cdn-cgi/image/format%3Dauto%2Cfit%3Dcover%2Cdpr%3D2%2Cbackground%3Dwhite%2Cquality%3D80%2Cwidth%3D800%2Cheight%3D800/api-uploads/ay/01cb8bc6-aad5-4599-9edb-99566793751a.png',
+    link: 'https://luma.com/claude-w1nu',
+  },
+];
+
+const evidenceLinks = [
+  { code: 'A/01', label: 'AI Production', title: 'Selected AI-assisted work', meta: 'Research · scripts · voice · image · video · human review', link: 'https://drive.google.com/drive/folders/1DuxVuVEhO5WYij0rI-1fvsvvYvtEBdQP' },
+  { code: 'A/02', label: 'Video Portfolio', title: 'Editing and production reel', meta: '150+ AI-assisted videos produced', link: 'https://drive.google.com/drive/folders/10mGNOHz4x05vpZCGn_VivYHulrCBTkHf?usp=sharing' },
+  { code: 'W/01', label: 'Technical Writing', title: 'Practical field notes on Medium', meta: 'AI · observability · blockchain · privacy', link: 'https://medium.com/@arunchandel1780' },
+  { code: 'C/01', label: 'Community Archive', title: 'Highlighted community initiatives', meta: 'Case studies, formats and outcomes', link: 'https://celestial-lift-d60.notion.site/Highlighted-Previous-Community-Initiatives-355d71208f4080b587aecb79265070b8' },
+  { code: 'C/02', label: 'Event Gallery', title: 'Field photographs and highlights', meta: 'People, rooms and shipped moments', link: 'https://drive.google.com/drive/folders/1aopl4w3usafbQLXqel1Vo9BjnMyzEoOi?usp=drive_link' },
+  { code: 'C/03', label: 'Event History', title: 'The Origin Guild on Luma', meta: 'Published community events', link: 'https://luma.com/user/theoriginguild' },
+  { code: 'C/04', label: 'Personal Events', title: 'Arun’s Luma record', meta: 'Hosted and collaborative programs', link: 'https://luma.com/user/arun_edition' },
+  { code: 'N/01', label: 'Community Network', title: '1,300+ on WhatsApp · 600+ on Telegram', meta: 'A living Central India builder network', link: 'https://t.me/tog_guild' },
 ];
 
 const missions = [
@@ -87,7 +119,7 @@ export default function Home() {
     <main>
       <nav className="site-nav" aria-label="Primary navigation">
         <a className="wordmark" href="#top" aria-label="Arun Chandel — home"><span className="wordmark-dot" aria-hidden="true" />ARUN / OPS</a>
-        <div className="nav-links"><a href="#about">About</a><a href="#missions">Missions</a><a href="#builds">Builds</a><a href="#workshops">Workshops</a></div>
+        <div className="nav-links"><a href="#about">About</a><a href="#media">Proof in motion</a><a href="#missions">Missions</a><a href="#builds">Builds</a></div>
         <a className="nav-cta" href="mailto:arunchandel1780@gmail.com">Start a build day <span aria-hidden="true">↗</span></a>
       </nav>
 
@@ -131,10 +163,34 @@ export default function Home() {
           <p className="about-role">Co-founder, The Origin Guild · Technology &amp; automation lead</p>
           <div className="about-background">
             <p>I build CRM workflows, AI-assisted operations, dashboards and follow-up systems for teams doing real work.</p>
-            <p>Outside work, I help run a 1,300+ member builder community and have delivered 50+ AI, developer and emerging-tech initiatives across Central India.</p>
+            <p>Outside work, I help run a 1,300+ member builder community and have delivered 52+ AI, developer and emerging-tech initiatives across Central India.</p>
             <p>My favourite format is simple: learn the tool deeply, build a useful workshop around it, and keep people shipping after the group photo.</p>
           </div>
           <div className="about-links"><a href="https://www.linkedin.com/in/arun-pratap-singh-chandel-7aa101259/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com/Arun5768" target="_blank" rel="noreferrer">GitHub ↗</a></div>
+        </div>
+      </section>
+
+      <section className="media-section" id="media">
+        <div className="media-heading">
+          <p className="eyebrow light"><span /> Proof in motion</p>
+          <h2>Real rooms.<br />Real work.<br /><em>Press play.</em></h2>
+          <p>Not stock photography. These are public artefacts from programs I helped bring to life—and direct doors into the work behind them.</p>
+        </div>
+        <article className="production-card">
+          <span className="production-code">PRODUCTION SYSTEM / 01</span>
+          <div className="production-number"><strong>150+</strong><span>AI-assisted videos produced</span></div>
+          <p>I combine research, scripting, voice, image generation, video generation, editing and human review into repeatable production workflows.</p>
+          <div className="tool-ticker" aria-label="AI production toolkit"><span>n8n</span><span>ElevenLabs</span><span>Higgsfield</span><span>Seedance</span><span>Runway</span><span>Veo</span><span>Kling</span><span>Premiere Pro</span><span>After Effects</span></div>
+          <div className="production-links"><a href="https://drive.google.com/drive/folders/1DuxVuVEhO5WYij0rI-1fvsvvYvtEBdQP" target="_blank" rel="noreferrer">Selected work ↗</a><a href="https://drive.google.com/drive/folders/10mGNOHz4x05vpZCGn_VivYHulrCBTkHf?usp=sharing" target="_blank" rel="noreferrer">Video portfolio ↗</a></div>
+        </article>
+        <div className="media-wall">
+          {mediaFrames.map((frame, index) => (
+            <a className="media-frame" href={frame.link} target="_blank" rel="noreferrer" key={frame.title}>
+              <img src={frame.image} alt={`${frame.title} official event artwork`} loading="lazy" />
+              <span className="frame-index">0{index + 1}</span>
+              <div><strong>{frame.title}</strong><span>{frame.note}</span></div>
+            </a>
+          ))}
         </div>
       </section>
 
@@ -196,6 +252,18 @@ export default function Home() {
           <a href="https://github.com/classroomio/classroomio/pull/898" target="_blank" rel="noreferrer"><span>Open source</span><strong>Classroomio contribution — PR #898</strong><i>↗</i></a>
           <a href="https://medium.com/@arunchandel1780" target="_blank" rel="noreferrer"><span>All field notes</span><strong>More writing on AI, infrastructure and adoption</strong><i>↗</i></a>
         </div>
+      </section>
+
+      <section className="evidence-section" id="evidence">
+        <div className="evidence-heading"><p className="eyebrow light"><span /> Open evidence deck</p><h2>Don’t take<br />my word for it.</h2><p>Open the work, the writing, the galleries and the communities. Every tile leads somewhere real.</p></div>
+        <div className="evidence-grid">
+          {evidenceLinks.map((item) => (
+            <a href={item.link} target="_blank" rel="noreferrer" className="evidence-card" key={item.code}>
+              <span className="evidence-code">{item.code}</span><span className="evidence-label">{item.label}</span><strong>{item.title}</strong><p>{item.meta}</p><i>↗</i>
+            </a>
+          ))}
+        </div>
+        <div className="community-foot"><span>THE ORIGIN GUILD</span><a href="https://x.com/og_guild" target="_blank" rel="noreferrer">X ↗</a><a href="https://www.linkedin.com/company/theoriginguild/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://www.instagram.com/theoriginguild/" target="_blank" rel="noreferrer">Instagram ↗</a><a href="https://chat.whatsapp.com/Ij3DzAbeA3M7bzA7zkhtHx" target="_blank" rel="noreferrer">WhatsApp ↗</a></div>
       </section>
 
       <section className="contact-section" id="contact">
